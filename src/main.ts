@@ -32,7 +32,7 @@ const cards = [
         "2x2",
         "https://data.cardsandhobbies.com/images/1778cf9a-2703-41e9-86d7-ec21af8cf61d/card.jpg",
         "Ainok Bond-Kin Card image",
-        "Outlast [1][W] ([1][W], [Tap]: Put a +1/+1 counter on this creature. (Outlast only as a sorcery.) Each creature you control with a +1/+1 counter on it has first strike."
+        "Outlast [1][W] ([1][W], [Tap]: Put a +1/+1 counter on this creature. (Outlast only as a sorcery.) \nEach creature you control with a +1/+1 counter on it has first strike."
     ),
     new Card(
         "d4282ddd-3e5b-4d4c-b1b7-a48401a3521f",
@@ -41,7 +41,7 @@ const cards = [
         "2x2",
         "https://data.cardsandhobbies.com/images/d4282ddd-3e5b-4d4c-b1b7-a48401a3521f/card.jpg",
         "Wrenn and Six Card Image",
-        "+1: Return up to one target land card from your graveyard to your hand. \n−1: Wrenn and Six deals 1 damage to any target. \n−7: You get an emblem with 'Instant and sorcery cards in your graveyard have retrace.' (You may cast instant and sorcery cards from your graveyard by discarding a land card in addition to paying their other costs.)"
+        "+1: Return up to one target land card from your graveyard to your hand. \n−1: Wrenn and Six deals 1 damage to any target. \n−7: You get an emblem with 'Instant and sorcery cards in your graveyard have retrace.' \n(You may cast instant and sorcery cards from your graveyard by discarding a land card in addition to paying their other costs.)"
     ),
     new Card(
         "1825a719-1b2a-4af9-9cd2-7cb497cd0317",
@@ -50,7 +50,7 @@ const cards = [
         "2x2",
         "https://data.cardsandhobbies.com/images/1825a719-1b2a-4af9-9cd2-7cb497cd0317/card.jpg",
         "Force of Negation Card Image",
-        "If it's not your turn, you may exile a blue card from your hand rather than pay this spell's mana cost. Counter target noncreature spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard."
+        "If it's not your turn, you may exile a blue card from your hand rather than pay this spell's mana cost. \nCounter target noncreature spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard."
     ),
     new Card(
         "3c429c40-2389-41e5-8681-4bb274e25eba",
@@ -77,7 +77,7 @@ const cards = [
         "2x2",
         "https://data.cardsandhobbies.com/images/c1a31d52-a407-4ded-bfca-cc812f11afa0/card.jpg",
         "Mana Vault Card Image",
-        "Mana Vault doesn't untap during your untap step. At the beginning of your upkeep, you may pay [4]. If you do, untap Mana Vault. At the beginning of your draw step, if Mana Vault is tapped, it deals 1 damage to you. [Tap]: Add [C][C][C]."
+        "Mana Vault doesn't untap during your untap step. \nAt the beginning of your upkeep, you may pay [4]. If you do, untap Mana Vault. \nAt the beginning of your draw step, if Mana Vault is tapped, it deals 1 damage to you. \n[Tap]: Add [C][C][C]."
     ),
 ];
 
@@ -93,8 +93,8 @@ function sortCards(order) {
 }
 
 function renderCards() {
-    const mainContent = document.querySelector(".main-content");
-    mainContent.innerHTML = "";
+    const cardsContainer = document.querySelector(".cards-container");
+    cardsContainer.innerHTML = "";
 
     for (const card of cards) {
         // the heck there's a diff between 'of' and 'in'
@@ -109,11 +109,17 @@ function renderCards() {
         setInfo.textContent = `${card.set}|${card.collector}`;
         container.appendChild(setInfo);
 
+        const cardName = document.createElement("h2");
+        cardName.textContent = `${card.name}`;
+        container.appendChild(cardName);
+
+
         const description = document.createElement("p");
         description.textContent = `${card.description}`;
+        description.innerHTML = card.description.replace(/\n/g, "<br>");
         container.appendChild(description);
 
-        mainContent.appendChild(container);
+        cardsContainer.appendChild(container);
     }
 }
 

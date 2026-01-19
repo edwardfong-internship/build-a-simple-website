@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
@@ -14,28 +14,26 @@
             <h1>Card Listing Page</h1>
 
             <!-- BANNER -->
-            <img src="public/banner.jpeg" alt="A banner discerning the details of an early bird sale" class="banner" />
+            <img src="banner.jpeg" alt="A banner discerning the details of an early bird sale" class="banner" />
         </header>
         <main>
-            <div class="dropdown-container">
-                <label for="sort-by">Sort By: </label>
-                <select name="sort-by" id="sort-by">
-                    <option value="descending">Collector Number - Descending</option>
-                    <option value="ascending" selected>Collector Number - Ascending</option>
-                </select>
-            </div>
-            <hr>
             <div class="main-content">
-                <!-- <img src="https://data.cardsandhobbies.com/images/1778cf9a-2703-41e9-86d7-ec21af8cf61d/card.jpg" alt="" />
-                <img src="https://data.cardsandhobbies.com/images/d4282ddd-3e5b-4d4c-b1b7-a48401a3521f/card.jpg" alt="" />
-                <img src="https://data.cardsandhobbies.com/images/1825a719-1b2a-4af9-9cd2-7cb497cd0317/card.jpg" alt="" />
-                <img src="https://data.cardsandhobbies.com/images/3c429c40-2389-41e5-8681-4bb274e25eba/card.jpg" alt="" />
-                <img src="https://data.cardsandhobbies.com/images/9e2e3efb-75cb-430f-b9f4-cb58f3aeb91b/card.jpg" alt="" />
-                <img src="https://data.cardsandhobbies.com/images/c1a31d52-a407-4ded-bfca-cc812f11afa0/card.jpg" alt="" /> -->
+                <div class="dropdown-container">
+                    <label for="sort-by">Sort By: </label>
+                    <select name="sort-by" id="sort-by">
+                        <option value="descending">Collector Number - Descending</option>
+                        <option value="ascending" selected>Collector Number - Ascending</option>
+                    </select>
+                </div>
+                <hr />
+
+                <div class="cards-container">
+
+                </div>
             </div>
         </main>
         <!-- IDK what this is so I'm just going to comment it -->
         <script type="module" src="/src/main.ts"></script>
-    <div id="badge"></div>
+        <div id="badge"></div>
     </body>
 </html>
