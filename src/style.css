@@ -16,69 +16,78 @@
     -webkit-text-size-adjust: 100%;
 }
 
-h1 {
-    width: 600px;
-    height: 68px;
-    /* There's a 1px invisible border apparently */
-    border: 1px 1px 1px 1px;
-
-    /* Additional padding to make it look more similiar to the Figma */
-    padding: 30px;
-
+*{
     font-family: Arial;
-    font-weight: 400px;
+    font-weight: 400;
     font-style: normal;
+    leading-trim: NONE;
+    letter-spacing: 0px;
+}
+
+h1 {
+    width: 478;
+    height: 68;
+    border-width: 1px;
+
     font-size: 60px;
     line-height: 68px;
-    text-shadow: 0px 4px 4px hsl(0, 0%, 0%);
-    display: block;
-    margin: 0 auto;
+
+    text-shadow: 0px 4px 4px #00000040;
+    color: hsla(0, 0%, 0%, 1);
+    
+    text-align: center;
+
+    margin: 96px 481px 0 481px;
 }
 
 .banner {
     width: 100vw;
-    padding: 15px 0;
+    margin: 48px 0;
 }
 
 main {
-    width: 100vw;
     font-family: Arial;
 }
 
 .main-content {
     /* Roughly equal to 970px/1440px */
-    width: 67vw;
+    width: 970px;
     margin: 0px auto;
 }
 
 .dropdown-container {
     display: flex;
     justify-content: flex-end;
-    gap: 1px;
+    gap: 8px;
     width: 100%;
     height: 28px;
     font-size: 16px;
-    /* More additional padding */
-    padding: 5px 0;
 }
 
 .dropdown-container label {
     line-height: 28px;
+    font-family: Arial;
+    text-align: right;
+    color: hsla(0, 0%, 0%, 1)
+
     /* Just for appearance */
-    margin: 0 5px 0 0;
 }
 
 .dropdown-container select {
     line-height: 100%;
 }
 
+hr {
+    margin: 24px 0;
+}
+
 .cards-container {
-    /* Additional padding again. */
-    padding: 2px 0 0 0;
+    padding: 0px 57px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 48px;
+    gap: 48px 24px;
     max-width: 100%;
+    margin: 0 0 96px 0;
 }
 
 .cards-container img {
@@ -88,14 +97,21 @@ main {
 
 h2 {
     font-size: 24px;
+    line-height: 32px;
+
+    color: hsla(0, 0%, 0%, 1);
 }
 
 h5 {
     font-size: 16px;
-    color: hsl(0, 0%, 30%);
+    line-height: 16px;
+
+    color: hsla(0, 0%, 0%, 0.7);
 }
 
 p {
     line-height: 24px;
     font-size: 16px;
+
+    color: hsla(0, 0%, 0%, 1);
 }
