@@ -17,13 +17,13 @@ class Card {
         this.cardId = cardId;
         this.name = name;
         this.collector = collector;
-        this.set = set;
+        this.set = set.toUpperCase();
         this.imageLink = imageLink;
         this.imageAltText = imageAltText;
         this.description = description;
     }
 
-    getPaddedCollector() {
+    getPaddedCollector() { // Need to preserve original for comparing values
         return this.collector.toString().padStart(3, "0");
     }
 }
