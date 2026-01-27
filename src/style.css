@@ -7,7 +7,6 @@
     font-weight: 400;
 
     color: #fff;
-    background-color: #242424;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -38,6 +37,8 @@ h1 {
     text-align: center;
 
     margin: 96px 481px 0 481px;
+
+    white-space: nowrap;
 }
 
 .banner {
@@ -77,12 +78,16 @@ main {
     line-height: 100%;
 }
 
+#sort-by{
+    width: 259px;
+    height: 26px;
+}
 hr {
     margin: 24px 0;
 }
 
 .cards-container {
-    padding: 0px 57px;
+    padding: 0px 48px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 48px 24px;
@@ -93,6 +98,7 @@ hr {
 .cards-container img {
     width: 100%;
     display: block;
+    margin: 0 0 8px 0;
 }
 
 h2 {
@@ -112,6 +118,7 @@ h5 {
 p {
     line-height: 24px;
     font-size: 16px;
+    margin: 8px 0 0 0;
 
     color: hsla(0, 0%, 0%, 1);
 }
