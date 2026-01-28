@@ -7,7 +7,6 @@
     font-weight: 400;
 
     color: #fff;
-    background-color: #242424;
 
     font-synthesis: none;
     text-rendering: optimizeLegibility;
@@ -16,46 +15,111 @@
     -webkit-text-size-adjust: 100%;
 }
 
+* {
+    font-family: Arial;
+    font-weight: 400;
+    font-style: normal;
+    leading-trim: NONE;
+    letter-spacing: 0px;
+}
+
 h1 {
+    width: 478;
+    height: 68;
+    border-width: 1px;
+
+    font-size: 60px;
+    line-height: 68px;
+
+    text-shadow: 0px 4px 4px #00000040;
+    color: hsla(0, 0%, 0%, 1);
+
     text-align: center;
-    font-size: 3em;
-    font-weight: normal;
-    text-shadow: 0px 5px 4px hsl(0, 0%, 0%);
+
+    margin: 96px 481px 0 481px;
+
+    white-space: nowrap;
 }
 
 .banner {
     width: 100vw;
+    margin: 48px 0;
 }
 
 main {
-    width: calc(60vw + 50px);
-    margin: 0 auto;
-    /* text-align: center; */
+    font-family: Arial;
+}
+
+.main-content {
+    /* Roughly equal to 970px/1440px */
+    width: 970px;
+    margin: 0px auto;
 }
 
 .dropdown-container {
     display: flex;
     justify-content: flex-end;
+    gap: 8px;
+    width: 100%;
+    height: 28px;
+    font-size: 16px;
 }
 
-.main-content {
+.dropdown-container label {
+    line-height: 28px;
+    font-family: Arial;
+    text-align: right;
+    color: hsla(0, 0%, 0%, 1);
+
+    /* Just for appearance */
+}
+
+.dropdown-container select {
+    line-height: 100%;
+}
+
+#sort-by {
+    width: 259px;
+    height: 26px;
+}
+hr {
+    margin: 24px 0;
+}
+
+.cards-container {
+    padding: 0px 57px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 48px 24px;
+    max-width: 100%;
+    margin: 0 0 96px 0;
 }
 
-.main-content div img, .main-content div p{
-  width: 100%;
+.cards-container img {
+    width: 100%;
+    display: block;
 }
 
-.main-content div{
-  /* display: inline-flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 30vw; */
-  width: 500px;
+h2 {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 16px 0 24px 0;
+
+    color: hsla(0, 0%, 0%, 1);
 }
 
-#sort-by{
-  margin: 0 0 0 5px;
+h5 {
+    font-size: 16px;
+    line-height: 16px;
+    margin: 24px 0 16px 0;
+
+    color: hsla(0, 0%, 0%, 0.7);
+}
+
+p {
+    line-height: 24px;
+    font-size: 16px;
+    margin: 0;
+
+    color: hsla(0, 0%, 0%, 1);
 }
